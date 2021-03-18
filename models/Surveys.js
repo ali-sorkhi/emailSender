@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose; //what property each record or collection has 
+
 const RecipientSchema = require('./Recipient') //how to use sub collection
 
-const surveySchema = new Schema({
+const surveysSchema = new Schema({
     title: String,
     body: String,
     subject: String,
@@ -11,7 +12,7 @@ const surveySchema = new Schema({
     no: { type: Number, default: 0},
     dateSent: Date,
     lastResponded: Date,
-    _user: { type: Schema.Types.ObjectId, ref: 'User' } //reference to user model
+    _user: { type: Schema.Types.ObjectId, ref: 'User' }, //reference to user model
 });
 
-mongoose.model('surveys', surveySchema); //creating new collection named 'users' and poperty of userSchema
+mongoose.model('survey', surveysSchema); //creating new collection named 'surveys' and poperty of surveySchema 
