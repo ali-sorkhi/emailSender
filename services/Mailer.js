@@ -10,7 +10,7 @@ class Mailer extends helper.Mail {
         this.subject = subject;
         this.body = new helper.Content('text/html', content);
         this.recipients = this.formatAddresses(recipients);
-
+ 
         //predefined function:
         this.addContent(this.body);
  
