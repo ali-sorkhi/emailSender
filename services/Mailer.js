@@ -13,7 +13,7 @@ class Mailer extends helper.Mail {
 
         //predefined function:
         this.addContent(this.body);
-
+ 
         //it's just how sendgrid works
         this.addClickTracking();
         this.addRecipients();
