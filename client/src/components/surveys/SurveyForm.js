@@ -46,7 +46,7 @@ function validate(values){
     // validate should return an error object , if that object is empty it validate is correct
     const errors = {};
 
-    errors.emails = validateEmails(values.emails || '');
+    errors.recipients = validateEmails(values.recipients || '');
 
     /* if (!values.title){
         errors.title='you must provide a title';
@@ -71,5 +71,5 @@ function validate(values){
 SurveyForm = reduxForm({
     validate, //= validate:validate
     form: 'surveyForm',
-    destroyOnUnmount: false,
+    destroyOnUnmount: false, //keeping form values
 })(SurveyForm);
